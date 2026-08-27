@@ -92,9 +92,9 @@ if menu == "1. Chiết Khấu & Thăng Cấp (25%-50%)":
             <h3>🥈 Cấp bậc: TƯ VẤN VIÊN CAO CẤP</h3>
             <ul>
                 <li><b>Điều kiện điểm:</b> <span class="gold">500 Điểm</span></li>
-                <li><b>Ai mua:</b> Tổng Doanh số Trực tiếp (bạn tự mua) + Doanh số Tuyến dưới.</li>
+                <li><b>Ai mua:</b> Tổng Doanh số Trực tiếp (bạn tự mua) và/hoặc Doanh số Tuyến dưới mua.</li>
                 <li><b>Thời gian:</b> Tích lũy trong 1 đến 2 tháng liên tiếp.</li>
-                <li><b>Quyền lợi:</b> Chiết khấu 35% + Hưởng 10% Lợi nhuận bán sỉ từ tuyến dưới (25%).</li>
+                <li><b>Quyền lợi:</b> Chiết khấu 35% + Hưởng 10% Lợi nhuận bán sỉ từ tuyến dưới (25%),và lợi nhuận bán lẻ là 35%.</li>
                 <li><b>Thời hạn:</b> <span class="gold">Vĩnh viễn (Không cần tái đạt chuẩn hàng năm)</span></li>
             </ul>
         </div>
