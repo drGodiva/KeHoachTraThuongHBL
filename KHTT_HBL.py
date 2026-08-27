@@ -1,19 +1,58 @@
 import streamlit as st
 
-# CẤU HÌNH TRANG VÀ MÀU SẮC (Xanh Ngọc Lục Bảo & Vàng Kim)
+# ==========================================
+# CẤU HÌNH TRANG
+# ==========================================
 st.set_page_config(page_title="Đào Tạo KHTT - Phụng Tâm", page_icon="💎", layout="wide")
 
+# ==========================================
+# ÉP MÀU THƯƠNG HIỆU (XANH NGỌC LỤC BẢO & VÀNG KIM)
+# ==========================================
 st.markdown("""
     <style>
-    .stApp { background-color: #F4FBF9; }
-    h1, h2, h3 { color: #004D40 !important; }
-    .emerald { color: #004D40; font-weight: bold; }
-    .gold { color: #D4AF37; font-weight: bold; }
-    .box { background: white; padding: 20px; border-radius: 10px; border-left: 8px solid #D4AF37; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); margin-bottom: 15px; }
+    /* 1. Nền toàn bộ trang web: Xanh Ngọc Lục Bảo */
+    .stApp, .stApp > header {
+        background-color: #004D40 !important;
+    }
+    
+    /* 2. Thanh điều hướng bên trái: Xanh đậm hơn để tạo chiều sâu */
+    [data-testid="stSidebar"] {
+        background-color: #012B1D !important;
+    }
+
+    /* 3. Đổi tất cả chữ văn bản thành Trắng để dễ đọc trên nền tối */
+    html, body, p, li, span, div, label {
+        color: #FFFFFF !important;
+    }
+
+    /* 4. Tiêu đề: Vàng Kim 100% */
+    h1, h2, h3, h4 {
+        color: #D4AF37 !important;
+        text-align: center;
+    }
+
+    /* 5. Khối nội dung: Nền Xanh thẫm, Viền Vàng Kim */
+    .box { 
+        background-color: #012B1D !important; 
+        padding: 20px; 
+        border-radius: 10px; 
+        border-left: 8px solid #D4AF37 !important; 
+        box-shadow: 2px 2px 15px rgba(0,0,0,0.8); 
+        margin-bottom: 15px;
+    }
+
+    /* 6. Từ khóa nhấn mạnh: Vàng Kim */
+    .gold { 
+        color: #D4AF37 !important; 
+        font-weight: bold; 
+        font-size: 1.1em;
+    }
     </style>
     """, unsafe_allow_html=True)
 
+# ==========================================
 # GIAO DIỆN CHÍNH
+# ==========================================
 st.title("🌟 HỆ THỐNG PHỤNG TÂM: BẢN ĐỒ KẾ HOẠCH TRẢ THƯỞNG")
 st.markdown("---")
 
@@ -42,7 +81,7 @@ if menu == "1. Chiết Khấu & Thăng Cấp (25%-50%)":
                 <li><b>Ai mua:</b> Không yêu cầu.</li>
                 <li><b>Thời gian:</b> Ngay khi ký hợp đồng.</li>
                 <li><b>Quyền lợi:</b> Mua hàng chiết khấu 25%.</li>
-                <li><b>Thời hạn:</b> <span class="emerald">Vĩnh viễn (Không cần tái đạt chuẩn hàng năm)</span></li>
+                <li><b>Thời hạn:</b> <span class="gold">Vĩnh viễn (Không cần tái đạt chuẩn hàng năm)</span></li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -56,7 +95,7 @@ if menu == "1. Chiết Khấu & Thăng Cấp (25%-50%)":
                 <li><b>Ai mua:</b> Tổng Doanh số Trực tiếp (bạn tự mua) + Doanh số Tuyến dưới.</li>
                 <li><b>Thời gian:</b> Tích lũy trong 1 đến 2 tháng liên tiếp.</li>
                 <li><b>Quyền lợi:</b> Chiết khấu 35% + Hưởng 10% Lợi nhuận bán sỉ từ tuyến dưới (25%).</li>
-                <li><b>Thời hạn:</b> <span class="emerald">Vĩnh viễn (Không cần tái đạt chuẩn hàng năm)</span></li>
+                <li><b>Thời hạn:</b> <span class="gold">Vĩnh viễn (Không cần tái đạt chuẩn hàng năm)</span></li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -70,7 +109,7 @@ if menu == "1. Chiết Khấu & Thăng Cấp (25%-50%)":
                 <li><b>Ai mua:</b> Trực tiếp + Tuyến dưới.</li>
                 <li><b>Thời gian:</b> 1 đến 3 tháng liên tiếp.</li>
                 <li><b>Quyền lợi:</b> Chiết khấu 42% + 17% Lợi nhuận bán sỉ.</li>
-                <li><b>Thời hạn:</b> <span class="emerald">Vĩnh viễn</span></li>
+                <li><b>Thời hạn:</b> <span class="gold">Vĩnh viễn</span></li>
             </ul>
         </div>
         <div class="box">
@@ -80,7 +119,7 @@ if menu == "1. Chiết Khấu & Thăng Cấp (25%-50%)":
                 <li><b>Ai mua:</b> Phải có tối thiểu <b>500 điểm Trực tiếp</b> (tự mua), còn lại từ Tuyến dưới.</li>
                 <li><b>Thời gian:</b> 1 đến 6 tháng liên tiếp.</li>
                 <li><b>Quyền lợi:</b> Tương tự đường nhanh.</li>
-                <li><b>Thời hạn:</b> <span class="emerald">Vĩnh viễn</span></li>
+                <li><b>Thời hạn:</b> <span class="gold">Vĩnh viễn</span></li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -107,19 +146,25 @@ elif menu == "2. Khái Niệm & Tái Đạt Chuẩn":
     st.header("2. KHOẢNG THỜI GIAN & TÁI ĐẠT CHUẨN")
     
     with st.expander("📅 NĂM TÀI CHÍNH & THÁNG DOANH SỐ LÀ GÌ?"):
-        st.info("""
-        - **Tháng Doanh Số:** Tính từ ngày làm việc ĐẦU TIÊN đến ngày làm việc CUỐI CÙNG của tháng. Đơn hàng phải thanh toán trong tháng đó.
-        - **Năm Tài Chính:** Bắt đầu từ **1/2 năm trước** đến hết ngày **31/1 năm sau**. Dùng để xác định giai đoạn tái đạt chuẩn GSV.
-        """)
+        st.markdown("""
+        <div style="color: black !important; background-color: #F4FBF9; padding: 15px; border-radius: 5px;">
+        <ul>
+            <li><b>Tháng Doanh Số:</b> Tính từ ngày làm việc ĐẦU TIÊN đến ngày làm việc CUỐI CÙNG của tháng. Đơn hàng phải thanh toán trong tháng đó.</li>
+            <li><b>Năm Tài Chính:</b> Bắt đầu từ <b>1/2 năm trước</b> đến hết ngày <b>31/1 năm sau</b>. Dùng để xác định giai đoạn tái đạt chuẩn GSV.</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
         
     with st.expander("🛡️ TÁI ĐẠT CHUẨN GIÁM SÁT VIÊN (BẮT BUỘC HÀNG NĂM)"):
-        st.warning("""
-        Để giữ quyền lợi 50% và hệ thống, GSV phải tái đạt chuẩn mỗi Năm Tài Chính bằng 1 trong các cách:
-        1. **Một tháng:** 4.000 Điểm (Tối thiểu 1.000 Chưa sử dụng).
-        2. **Hai tháng:** 4.000 Điểm trong 2 tháng liên tiếp (Tối thiểu 1.000 Chưa sử dụng).
-        3. **Tích lũy 12 tháng (Giữ tuyến dưới):** 10.000 Điểm Tổng Doanh Số Chưa Sử Dụng.
-        4. **Tích lũy 12 tháng (Mất tuyến dưới):** 2.000 Điểm Chưa Sử Dụng. (Bạn vẫn giữ 50%, nhưng TOÀN BỘ nhánh tuyến dưới có GSV sẽ bị đẩy lên cho tuyến trên).
-        """)
+        st.markdown("""
+        <div style="color: black !important; background-color: #FFF3CD; padding: 15px; border-radius: 5px; border-left: 5px solid #FFC107;">
+        <b>Để giữ quyền lợi 50% và hệ thống, GSV phải tái đạt chuẩn mỗi Năm Tài Chính bằng 1 trong các cách:</b><br><br>
+        1. <b>Một tháng:</b> 4.000 Điểm (Tối thiểu 1.000 Chưa sử dụng).<br>
+        2. <b>Hai tháng:</b> 4.000 Điểm trong 2 tháng liên tiếp (Tối thiểu 1.000 Chưa sử dụng).<br>
+        3. <b>Tích lũy 12 tháng (Giữ tuyến dưới):</b> 10.000 Điểm Tổng Doanh Số Chưa Sử Dụng.<br>
+        4. <b>Tích lũy 12 tháng (Mất tuyến dưới):</b> 2.000 Điểm Chưa Sử Dụng. (Bạn vẫn giữ 50%, nhưng TOÀN BỘ nhánh tuyến dưới có GSV sẽ bị đẩy lên cho tuyến trên).
+        </div>
+        """, unsafe_allow_html=True)
 
 # ==========================================
 # PHẦN 3: NẤC THANG LÃNH ĐẠO
@@ -161,14 +206,14 @@ elif menu == "4. Kim Cương & Mark Hughes Bonus":
     with col1:
         st.markdown("""
         <div class="box">
-            <h3 class="emerald">💎 DANH HIỆU KIM CƯƠNG</h3>
-            <p>Xác định bằng số lượng Thành Viên Nhóm Chủ Tịch ở các NHÁNH RIÊNG BIỆT tuyến dưới:</p>
+            <h3>💎 DANH HIỆU KIM CƯƠNG</h3>
+            <p>Xác định bằng số lượng Thành Viên Nhóm Chủ Tịch ở các <b>NHÁNH RIÊNG BIỆT</b> tuyến dưới:</p>
             <ul>
                 <li><b>1 Kim Cương:</b> 1 nhánh có Chủ Tịch.</li>
                 <li><b>2 Kim Cương:</b> 2 nhánh có Chủ Tịch.</li>
                 <li><b>3 Kim Cương (QT):</b> 3 nhánh có Chủ Tịch.</li>
                 <li><b>4 Kim Cương (LĐ):</b> 4 nhánh có Chủ Tịch.</li>
-                <li><b>5 -> 9 Kim Cương:</b> 5 đến 9 nhánh có Chủ Tịch (Câu Lạc Bộ Chủ Tịch).</li>
+                <li><b>5 -> 9 Kim Cương:</b> 5 đến 9 nhánh (Câu Lạc Bộ Chủ Tịch).</li>
                 <li><b>10 Kim Cương:</b> 10 nhánh riêng biệt (Nhóm Sáng Lập).</li>
             </ul>
         </div>
@@ -177,9 +222,9 @@ elif menu == "4. Kim Cương & Mark Hughes Bonus":
     with col2:
         st.markdown("""
         <div class="box">
-            <h3 class="gold">🌐 PHẦN THƯỞNG MARK HUGHES</h3>
+            <h3>🌐 PHẦN THƯỞNG MARK HUGHES</h3>
             <ul>
-                <li><b>Nguồn quỹ:</b> Trích 1% doanh thu toàn cầu (tính trên Cơ Sở Thu Nhập) của tập đoàn.</li>
+                <li><b>Nguồn quỹ:</b> Trích 1% doanh thu toàn cầu của tập đoàn.</li>
                 <li><b>Đối tượng:</b> Dành riêng cho các Thành Viên xuất sắc đạt chuẩn thuộc <b>Nhóm Chủ Tịch</b>.</li>
                 <li><b>Mục đích:</b> Ghi nhận thành tích nổi bật trong việc thúc đẩy kinh doanh.</li>
                 <li><b>Kỳ xét duyệt:</b> Thời gian xét chuẩn là 12 tháng, bắt đầu từ <b>tháng 1 và kết thúc vào tháng 12</b> của năm đó.</li>
